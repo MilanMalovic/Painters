@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="sr">
+	<head>
+		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+		<title>HTML CSS primer</title>
+		<link href="stilovi/styles.css" rel="stylesheet" /> 
+    </head>
+	<body>
+		<header>
+			<h1>Glavni naslov</h1>
+		</header>
+		<main>
+			<nav>
+				<ul>
+                    <li class="dummy">Meni</li>
+					<li><a href="#">Prva stavka</a></li><li>
+                    <a href="#">Druga stavka</a></li>
+					<li><a href="#">Treća stavka</a></li>
+					<li><a href="#">Četvrta stavka</a></li>
+					<li><a href="#">Četvrta stavka</a></li>
+					
+				</ul>
+				</nav>
+			<section>
+				<h2>Naslov sekcije 1</h2>
+				<img class="jumbo" src="images/slika.jpg" />
+			</section>
+			<section>
+				<h2>Naslov sekcije 2</h2>
+				<p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pulvinar magna vel erat ultrices vehicula. Donec augue nulla, iaculis et sollicitudin ac, efficitur at erat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent et sodales ex, et euismod leo. Praesent nec egestas justo. Curabitur eu bibendum massa, sed vulputate felis. Vivamus at bibendum turpis. Vivamus eu nibh vel dui semper congue. Sed nec iaculis arcu. Fusce eu diam quis nisi aliquet auctor. Sed dapibus viverra tortor non fringilla.<br/>
+                </p>
+			</section>
+			<section>
+				<h2>Naslov sekcije 3</h2>
+				<div class="row centered-text">
+					<div>
+						<h3>Blok 1 naslov</h3>
+						<p>Tekst u bloku 1. Phasellus tempus faucibus porta.</p>
+					</div>
+					<div>
+						<h3>Blok 2 naslov</h3>
+						<p>Tekst u bloku 2. Vivamus tempor placerat felis ut aliquam.</p>
+					</div>
+					<div>
+						<h3>Blok 3 naslov</h3>
+						<p>Tekst u bloku 3. Praesent et cursus tortor, id facilisis sem.</p>
+					</div>
+					<div>
+						<h3>Blok 4 naslov</h3>
+						<p>Tekst u bloku 4. Maecenas condimentum urna in nibh tempor, sed venenatis eros bibendum.</p>
+					</div>
+					<div>
+						<h3>Blok 5 naslov</h3>
+						<p>Tekst u bloku 5.</p>
+					</div>
+					<div>
+						<h3>Blok 6 naslov</h3>
+						<p>Tekst u bloku 6. Etiam lobortis vel eros vel luctus.</p>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2>Naslov sekcije 4</h2>
+				<p><i>Phasellus tempus faucibus porta. Vivamus tempor placerat felis ut aliquam. Praesent et cursus tortor, id facilisis sem. Maecenas condimentum urna in nibh tempor, sed venenatis eros bibendum. Nullam eget magna arcu. Etiam lacinia a ante in cursus. Cras tempor semper ullamcorper. Etiam lobortis vel eros vel luctus. </i></p>
+				<ul>
+					<li>Prva stavka obične liste</li>
+					<li>Druga stavka obične liste</li>
+					<li>Treća stavka obične liste</li>
+					<li>Četvrta stavka obične liste</li>
+					<li>Peta stavka obične liste</li>
+					<li>Šesta stavka obične liste</li>
+				</ul>
+			</section>
+            <section>
+                <h2>Sekcija sa formom</h2>
+                <form method="post" action="#">
+                    <label for="ime">Ime: </label>
+                    <input type="text" name="ime" id="ime" /><br/>
+                    <label for="pass">Lozinka: </label>
+                    <input type="password" name="pass" id="pass" /><br/>
+                    <label for="izbor">Izaberi: </label>
+                    <select name="izbor" id="izbor" required="required" >
+                        <option value=""> --- Vaš izbor --- </option>
+                        <option value="1">Stavka 1</option>
+                        <option value="2">Stavka 2</option>
+                    </select>
+                    <br/>
+                    <input type="submit" value="pošalji" />
+                </form>
+            </section>
+            <hr/>
+            <div class="centered-text">
+                <h2>Ovaj deo je sa običnim div tagovima</h2>
+                <div>
+                    Nunc rutrum mauris turpis, id facilisis nisl volutpat sodales. Donec rhoncus semper arcu, eu dignissim leo dictum vel. 
+                </div>
+                <div class="box shadow">
+                    <img src="images/slika.jpg" />
+                </div>
+                <div class="box rounded-rect shadow">
+                    <img src="images/slika.jpg" />
+                </div>
+                <div class="box circle shadow">
+                    <img src="images/slika.jpg" />
+                </div>
+            </div>
+		</main>
+	</body>
+</html>

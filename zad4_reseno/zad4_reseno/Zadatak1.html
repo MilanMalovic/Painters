@@ -1,0 +1,148 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="stilovi.css" />
+    <script src="js/jquery-1.11.0.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+   <style type="text/css">
+	p.eco {
+		visibility: hidden;
+		font-size: large;
+		font-weight: bold;
+		color: green
+	}
+	
+	p.eco1 {
+		visibility: hidden;
+		font-size: large;
+		font-weight: bold;
+		color: green
+	}
+	
+  </style>
+  <script language="JavaScript">
+  	function showEko(){
+		var polje = document.getElementById("eco");
+		if(polje.className == "eco")
+			document.getElementById("eco").style.visibility = "visible";
+		
+	}
+	
+	function hideEko(){
+		var polje = document.getElementById("eco");
+		if(polje.className == "eco")
+			document.getElementById("eco").style.visibility = "hidden";
+	}
+
+	function selectChecker(polje){
+			// var tabela1 = document.getElementById("tabela1");
+			if(polje.value == 3 ){
+				document.getElementById("eco").style.color="red";
+			}else{
+				document.getElementById("eco").style.color="green";
+			}
+	}
+	
+    function proveraPolja(polje, tekst){
+		if(polje.value==""){ 
+			alert(tekst);	
+			return false;
+		}
+		else return true;			
+	}
+
+	function proveraForme(forma){
+
+		if(proveraPolja(forma.ime,"niste uneli ime")==false){
+			forma.ime.focus();
+			return false;
+		}	
+		if(proveraPolja(forma.prezime,"niste uneli prezime")==false){
+			forma.prezime.focus();
+			return false;
+		}	
+		if(proveraPolja(forma.jmbg,"niste uneli jmbg")==false){
+			forma.jmbg.focus();
+			return false;
+		}
+
+		if(proveraPolja(forma.registracija,"niste uneli registraciju")==false){
+			forma.registracija.focus();
+			return false;
+		}
+
+		var ime = forma.ime.value;
+		if (ime[0] != ime[0].toUpperCase()) {
+			alert("Ime mora poceti velikim slovom!");
+			return false;
+		}
+
+		var prezime = forma.prezime.value;
+		if (prezime[0] != prezime[0].toUpperCase()) {
+			alert("Prezime mora poceti velikim slovom!");
+			return false;
+		}
+
+		var jmbg = forma.jmbg.value;
+		if (jmbg.length != 13) {
+			alert("JMBG mora imati 13 karaktera!");
+			return false;
+		}
+
+		return true;
+	}
+
+  </script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Produzenje registracije</h2>
+  <form action="Zadatak2.html" method="get" onSubmit="return proveraForme(this)">
+    <div class="form-group">			
+      <label for="ime">Ime:</label>
+      <input type="text" class="form-control" id="ime" name="ime" placeholder="Unesite ime">
+    </div>
+    <div class="form-group">
+      <label for="prezime">Prezime:</label>
+      <input type="text" class="form-control" id="prezime" name="prezime" placeholder="Unesite prezime">
+    </div>
+    <div class="form-group">
+      <label for="jmbg">Jmbg:</label>
+      <input type="text" class="form-control" id="jmbg" name="jmbg" placeholder="Unesite jmbg">
+    </div>
+    <div class="form-group">
+      <label for="registracija">Registracija:</label>
+      <input type="text" class="form-control" id="registracija" name="registracija" placeholder="Unesite registraciju">
+    </div>
+    <div class="form-group">
+	  <label for="sel1">Marka vozila:</label>
+	  <select name="marka" class="form-control" id="sel1">
+	    <option value="1"></option>
+  		<option value="2">Mercedes</option>
+  		<option value="3">Peugeot</option>
+  		<option value="4">Renault</option>
+	  </select>
+	</div>
+	<div class="form-group" onmouseover="showEko()" onmouseout="hideEko()">
+	  <label for="sel1">Tip vozila:</label>
+	  <select name="tip" class="form-control" id="sel1" onchange="selectChecker(this)">
+  		<option value="1"></option>
+  		<option value="2">Elektricno</option>
+  		<option value="3">Motorno</option>
+	  </select>
+	</div>
+    <button type="submit" name="posalji" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+
+<p id="menu">U kombo boksu su navedene sledeće marke vozila: <i>Mercedes</i>, <i>Peugeot</i> i <i>Renault</i>!</p>  
+
+<p id="eco" class="eco">
+Eko klasa.
+</p>
+
+</body>
+</html>

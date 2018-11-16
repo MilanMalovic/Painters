@@ -1,0 +1,206 @@
+/*
+    CSS stilovi za nas sajt
+*/
+
+*{
+    font-family: Verdana, "Trebuchet MS", Swiss, sans-serif;
+    color: #363636;
+}
+
+body{
+    background: #cfcfcf;
+    margin: 0;
+}
+
+h1,h2,h3{
+    text-align: center;
+    color: #9f0000;
+}
+
+
+header{
+    background: #9c9c9c;
+}
+
+header>h1{
+    margin:0;
+    line-height: 2em;
+}
+
+main{
+    background: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav>ul{
+    margin:0;
+    list-style: none;
+    padding:0;
+    width: 100%;
+    background-color:#FFcc00;
+}
+
+nav>ul>li{
+    display: none;
+    line-height: 2em;
+    background-color:#FFcc00;
+    border-bottom: 1px solid #9f0000;
+    text-align:center;
+}
+
+nav>ul>li.dummy{
+    display:block;
+}
+
+nav>ul>li a{
+    color:#9f0000;
+}
+
+nav>ul>li:hover a{
+    color: white;
+}
+
+nav>ul>li:hover{
+    background: #9f0000;
+}
+
+nav>ul:hover>li{
+   display:block; 
+}
+
+section>h2{
+    background: #FFcc00;
+    line-height: 1.75em;
+    margin-bottom: 0;
+}
+
+img.jumbo{
+    width: 100%;
+}
+
+p{
+    padding:1em;
+}
+
+form{
+    width: 80%;
+    margin: 2em auto;
+    padding: 1em;
+    border: 1px solid #9c9c9c;
+    border-radius: 20px;
+    background: #dfdfdf;
+}
+
+label{
+    display: inline-block;
+    color:#9f0000;
+    line-height: 1.5em;
+    width: 15%;
+}
+
+input{
+    line-height: 1.5em;
+    height: 2em;
+    width: 30%;
+    display: inline-block;
+    border: 1px solid #9f0000;
+    border-radius: 8px;
+}
+
+select{
+    width: 30%;
+    height: 2em;
+    border: 1px solid #9f0000;
+    border-radius: 8px;
+}
+/* class selektori */
+.box{
+    width:200px;
+    height: 200px;
+    border: 1px solid #9f0000;
+    overflow: hidden;
+    display: inline-block;
+    margin:1em;
+}
+
+.box>img{
+    height: 100%;
+}
+
+.rounded-rect{
+    border-radius: 20px;
+}
+
+.circle{
+    border-radius: 50%;
+}
+
+.shadow{
+    box-shadow: 5px 5px 8px #696969;
+}
+
+.centered-text{
+    text-align: center;
+}
+
+
+.row:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.row>div{
+    border: 1px solid;
+    margin: 0.5em;
+    box-sizing: border-box;
+}
+
+
+/* media queries za velike ekrane */
+@media only screen and (min-width:640px){
+    
+    main{
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    nav>ul>li{
+        display:table-cell;
+        padding-left: 2em;
+        padding-right: 2em;
+        border-right: 1px solid #9f0000;
+        border-bottom:none;
+    }
+    
+    nav>ul>li.dummy{
+        display:none;
+    }
+    
+    nav>ul:hover>li{
+        display:table-cell;
+    }
+    
+    nav>ul:hover>li.dummy{
+        display:none;
+    }
+    
+    .row>div{
+        margin:0;
+        border: 1px solid;
+        display:inline-block;
+        vertical-align:top;  
+        width:45%;
+        margin: 0.5em;
+        box-sizing: border-box;
+    }
+}
+
+
+@media only screen and (min-width:1024px){
+    .row>div{
+        width:31%;
+    }
+}
